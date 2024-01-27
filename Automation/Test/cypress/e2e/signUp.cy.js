@@ -1,0 +1,20 @@
+it('abcd', function(){
+    cy.visit('https://demoblaze.com/')
+    cy.get('#signin2').click()
+    cy.wait(5000)
+    cy.get('#sign-username').type('vbfuhdy')
+    cy.get('#sign-password').type('757t465')
+    cy.get('#signInModal > .modal-dialog > .modal-content > .modal-footer > .btn-secondary').click()
+    cy.wait(5000)
+    cy.get('#signin2').click()
+    cy.wait(4000)
+    cy.get('#sign-username').clear()
+    cy.wait(5000)
+    cy.get('#sign-password').clear()
+    cy.get('#sign-username').type('mukesh')
+    cy.get('#sign-password').clear()
+    
+    cy.get('#sign-password').type('mukesh@')
+    cy.get('#signInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
+    })
+    
